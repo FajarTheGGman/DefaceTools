@@ -153,6 +153,7 @@ fi
 if [ $bego = 4 ] || [ $bego = 4 ]
 then
 clear
+cd module
 sh sc.sh
 fi
 
